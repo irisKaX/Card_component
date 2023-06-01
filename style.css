@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: hsl(216, 50%, 16%);
+}
+
+.card {
+    width: 350px;
+    box-shadow: 10px 10px 10px 20px hsl(217, 54%, 11%);
+    border-radius: 1rem;
+}
+
+.card_container {
+    margin: 1.2rem;
+    background: hsl(216, 50%, 16%);
+}
+
+.top {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 1.2rem;
+}
+
+.view {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%);
+    transition: top 1s;
+}
+
+.top:hover .view {
+    top: 40%;
+}
+
+.top:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0.7;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+  
+.top:hover::before {
+    background-color: hsl(178, 100%, 50%);
+}
+  
+.top img {
+    max-width: 100%;
+    transform: scale(1.02);
+}
+
+  /* /////////////////////////////////////////////////// */
+
+
+.bottom {
+    padding: 2rem 0rem 1rem 0rem;
+}
+
+.title {
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+.title:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.text {
+    color: hsl(215, 51%, 70%);
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+
+.value {
+    border-bottom: solid hsla(214.9, 51.6%, 70%, 0.3) 1px;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.eth {
+    color: hsl(178, 100%, 50%);
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.days {
+    color: hsl(215, 51%, 70%);
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.avatar {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    padding-top: 2rem;
+}
+
+.avatar img {
+    width: 30px;
+    height: 30px;
+    border: solid white 1px;
+    border-radius: 50%;
+}
+
+.avatar p {
+    font-size: 14px;
+    color: hsl(215, 51%, 70%);
+}
+
+.name {
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.name:hover {
+    color: hsl(178, 100%, 50%);
+}
